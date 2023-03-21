@@ -7,7 +7,7 @@ computerSelection = getComputerChoice();
 
 function playRound(playerSelection, computerSelection) {
     let victor;
-
+    playerSelection = playerSelection.toLowerCase();
     if ((playerSelection === 'paper' && computerSelection === 'rock') || (playerSelection === 'scissors' && computerSelection === 'paper') || (playerSelection === 'rock' && computerSelection === 'scissors')) {
         victor = `Player selects ${playerSelection} and Computer selects ${computerSelection}, you win! Congratulations!`;
         return victor;

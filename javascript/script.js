@@ -1,9 +1,37 @@
 let playerSelection;
 let computerSelection;
-playerSelection = prompt('rock, paper, or scissors');
-playerSelection = playerSelection.toLowerCase();
-computerSelection = getComputerChoice();
 
+function game() {
+    let playerPoints = 0;
+    let computerPoints = 0;
+    for (let i = 0; i < 5; i++) {
+        console.log(`Round ${i+1}`);
+        playerSelection = prompt('rock, paper, or scissors');
+        playerSelection = playerSelection.toLowerCase();
+        computerSelection = getComputerChoice();
+        let playerOrComputer = playRound(playerSelection,computerSelection);
+        if (playerOrComputer === 'player') {
+            playerPoints += 1;
+        }
+        else if (playerOrComputer === 'computer') {
+            computerPoints += 1;
+        }
+        else {
+            playerPoints += 0;
+            computerPoints += 0;
+        }
+    }
+    if (playerPoints > computerPoints) {
+        console.log(`Player score is: ${playerPoints}.`);
+        console.log(`Computer score is: ${computerPoints}.`);
+        console.log('You win!');
+    }
+    else {
+        console.log(`Player score is: ${playerPoints}.`);
+        console.log(`Computer score is: ${computerPoints}.`);
+        console.log('You lose.');
+    }
+}
 
 function playRound(playerSelection, computerSelection) {
     let victor;

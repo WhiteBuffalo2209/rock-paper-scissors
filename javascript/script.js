@@ -24,7 +24,7 @@ function game() {
     if (playerPoints > computerPoints) {
         console.log(`Player score is: ${playerPoints}.`);
         console.log(`Computer score is: ${computerPoints}.`);
-        console.log('You win!');
+        console.log('You win! I love you Megan <3');
     }
     else {
         console.log(`Player score is: ${playerPoints}.`);
@@ -55,7 +55,6 @@ function playRound(playerSelection, computerSelection) {
         victor = 'invalid';
         return victor;
     }
-
   }
 
 function getComputerChoice() {

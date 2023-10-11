@@ -1,8 +1,15 @@
 h1{
     color: blueviolet;
 }
-
-.apple{
+.selection{
     color: red;
     font-weight: 700;
+}
+.display {
+    background: black;
+    color: white;
+}
+.score {
+    background: orange;
+    color: black;
 }
